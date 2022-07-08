@@ -1,0 +1,121 @@
+:root{
+    --title:'Roboto', sans-serif;
+    --parrafo:'Shadows Into Light', cursive;
+    --pixelado: 'Press Start 2P', cursive;
+    --caricatura: 'Henny Penny', cursive;
+
+}
+
+*{
+    margin: 0;
+    padding: 0%;
+    
+}
+.mainContainer{
+    width: 100%;
+    height: 100vh;
+    color: white;
+}
+header{
+    background-color: black;
+    height: 60px;
+}
+header nav{
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+}
+.logo{
+    width: 100px;
+    align-self: center;
+}
+.listaNav{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    gap: 8px;
+    text-align: center;
+}
+.listaNav li{
+    list-style: none;
+    position: relative;
+    
+}
+
+.listaNav li a{
+    text-decoration: none;
+    color: white;
+    font-family: var(--pixelado);
+    font-size: 8px;
+    
+}
+.mainContent{
+
+    height: calc(100% - (60px));
+    margin: 0;
+    padding: 18px;
+
+    /* img settings */
+    background-image: linear-gradient(rgba(5,10,5,0.80), rgba(90,40,90,0.80)), url(./imgs/Heimerdinger.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    
+}
+
+.mainContent .title{
+
+    text-align: center;
+    margin: 16px;
+    font-family: var(--pixelado);
+}
+
+.descripcion{
+    font-family: var(--title);
+    font-size: 18px;
+    
+
+    
+    text-align: justify;
+}
+
+@media (min-width: 640px) {
+    .logo{
+
+        padding-left: 120px;
+    }
+    .listaNav li a{
+        font-size: 16px;
+
+    }
+    .listaNav li::before {
+        content: "";
+        height: 3px;
+        width: 0%;
+        background: yellowgreen;
+        position: absolute;
+        bottom: -12px;
+        left: 0;
+        transition: 0.4s ease-out;
+    
+    }
+    .listaNav li:hover::before{
+        width: 100%;
+    }
+    .mainContent{
+
+        padding: 60px;
+    }
+    .descripcion{
+        font-size: 24px;
+        
+        padding: 0 80px;
+        
+    }
+}
