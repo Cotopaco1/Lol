@@ -51,7 +51,7 @@ header nav{
     font-size: 8px;
     
 }
-.listaNav li:nth-child(1):before {
+.listaNav li:nth-child(3)::before {
     content: "";
     height: 3px;
     width: 100%;
