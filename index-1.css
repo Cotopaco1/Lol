@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+}
+.mainContainer{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./Summoners\ rift.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+}
+
+header{
+    background-color: black;
+    height: 60px;
+}
+
+header nav{
+    height: 100%;
+}
+.listaNav{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    place-items: center;
+    
+}
+.listaNav li{
+    list-style: none;
+    position: relative;
+    
+}
+.listaNav li::before {
+    content: "";
+    height: 3px;
+    width: 0%;
+    background: yellowgreen;
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    transition: 0.4s ease-out;
+
+}
+.listaNav li:hover::before{
+    width: 100%;
+}
+.listaNav li a{
+    text-decoration: none;
+    color: white;
+    
+}
+.mainContent{
+    height: calc(100% - (150px));
+    margin: 50px;
+    background-image: linear-gradient(rgba(5,10,5,0.80), rgba(90,40,90,0.80)), url(./Heimerdinger.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    padding: 18px;
+    display: grid;
+    grid-template-rows: auto auto 2fr;
+    place-items: center;
+}
+.mainContent .title{
+
+    text-align: center;
+    margin: 16px;
+}
+.herramienta{
+    width: 200px;
+    height: 200px;
+}
